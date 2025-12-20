@@ -18,23 +18,43 @@ const observer = new IntersectionObserver((entries) => {
 
 const skills = [
     {
-        name: "Gestión Documental",
-        icon: "fas fa-folder-open",
-        color: "text-blue-400",
+        name: "Producción Multimedia",
+        icon: "fas fa-video",
+        color: "text-red-500",
         details: [
-            "Digitalización de más de 1000 expedientes administrativos.",
-            "Implementación de sistema de etiquetado por códigos QR.",
-            "Reducción del tiempo de búsqueda de documentos en un 40%."
+            "Manejo profesional de cámaras y encuadres.",
+            "Transmisión, proyección e interacción en vivo.",
+            "Producción de piso y asistencia técnica."
         ]
     },
     {
-        name: "Redes Sociales",
-        icon: "fab fa-instagram",
+        name: "Edición y Guiones",
+        icon: "fas fa-film",
+        color: "text-purple-500",
+        details: [
+            "Creación de guiones y continuidades.",
+            "Edición de video y post-producción.",
+            "Capacidad de síntesis audiovisual."
+        ]
+    },
+    {
+        name: "Gestión Administrativa",
+        icon: "fas fa-folder-open",
+        color: "text-blue-400",
+        details: [
+            "Técnico en gestión documental y archivos.",
+            "Planificación y organización de procesos.",
+            "Implementación de sistemas eficientes."
+        ]
+    },
+    {
+        name: "Comunicación Estratégica",
+        icon: "fas fa-bullhorn",
         color: "text-pink-500",
         details: [
-            "Gestión integral de Instagram y Facebook para Variedades Marta GB.",
-            "Crecimiento de la comunidad en un 200% en el último año.",
-            "Diseño de campañas de interacción y fidelización."
+            "Comunicación asertiva y ética.",
+            "Redacción de textos y copys.",
+            "Moderación digital y manejo de público."
         ]
     },
     {
@@ -42,68 +62,56 @@ const skills = [
         icon: "fas fa-users",
         color: "text-green-500",
         details: [
-            "Coordinación diaria con el equipo de ventas y logística.",
-            "Facilitador en reuniones de planificación semanal.",
-            "Resolución de conflictos y mediación interna."
+            "Capacitación de personal a cargo.",
+            "Liderazgo en equipos colaborativos.",
+            "Resolución de conflictos y mediación."
         ]
     },
     {
-        name: "Gestión de Proyectos",
-        icon: "fas fa-tasks",
-        color: "text-rose-500",
-        details: [
-            "Liderazgo en la renovación de la imagen corporativa.",
-            "Seguimiento de tiempos y entregables con herramientas ágiles.",
-            "Organización de eventos de lanzamiento de productos."
-        ]
-    },
-    {
-        name: "Organización",
-        icon: "fas fa-clipboard-check",
+        name: "Habilidades Blandas",
+        icon: "fas fa-brain",
         color: "text-yellow-400",
         details: [
-            "Mantenimiento de inventarios actualizados en tiempo real.",
-            "Planificación de agenda ejecutiva y comercial.",
-            "Metodología 5S aplicada al espacio de trabajo."
+            "Pensamiento crítico y capacidad de análisis.",
+            "Curiosidad y asombro constante.",
+            "Trabajo bajo presión y adaptabilidad."
         ]
     },
     {
-        name: "Proactividad",
-        icon: "fas fa-lightbulb",
-        color: "text-accent",
-        details: [
-            "Propuesta e implementación de nuevos canales de venta digital.",
-            "Anticipación a problemas logísticos en temporadas altas.",
-            "Aprendizaje continuo de nuevas herramientas de diseño."
-        ]
-    },
-    {
-        name: "Adaptabilidad",
-        icon: "fas fa-sync-alt",
+        name: "Servicio al Cliente",
+        icon: "fas fa-headset",
         color: "text-cyan-400",
         details: [
-            "Rápida transición a trabajo remoto durante contingencias.",
-            "Adaptación a nuevos softwares de gestión interna.",
-            "Versatilidad para cubrir diferentes roles según necesidad."
+            "Atención personalizada y fidelización.",
+            "Manejo de PQRS y satisfacción del cliente.",
+            "Experiencia en ventas y mostrador."
         ]
     },
     {
-        name: "Office Suite",
-        icon: "fas fa-file-excel",
-        color: "text-green-600",
+        name: "Herramientas Digitales",
+        icon: "fas fa-laptop-code",
+        color: "text-indigo-400",
         details: [
-            "Dominio avanzado de Excel para reportes de ventas.",
-            "Creación de presentaciones impactantes en PowerPoint.",
-            "Automatización de correos y tareas administrativas."
+            "Manejo de Office Suite y herramientas administrativas.",
+            "Gestión de redes sociales y comunidad digital.",
+            "Adaptación a nuevos softwares."
         ]
     },
 ];
 
 const projects = [
     {
+        title: "Producción Telepacífico",
+        category: "contenido",
+        description: "Creación de guiones, continuidades y asistencia de producción de piso. Programación de invitados.",
+        image: "https://images.unsplash.com/photo-1586899028174-e7098604235b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        tags: ["TV", "Producción", "Guiones"],
+        link: "#"
+    },
+    {
         title: "Estrategia Digital Variedades Marta GB",
         category: "social",
-        description: "Creación de contenido y gestión de comunidad durante 5 años. Crecimiento sostenido de la marca.",
+        description: "Creación de contenido y gestión de comunidad. Crecimiento sostenido de la marca.",
         image: "https://images.unsplash.com/photo-1557838402-282f877f2cf0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         tags: ["Social Media", "Community Management"],
         link: "#"
@@ -117,11 +125,11 @@ const projects = [
         link: "#"
     },
     {
-        title: "Planificación de Contenidos",
+        title: "Vocal Comunicaciones IPUC",
         category: "contenido",
-        description: "Diseño de parrillas de contenido mensual y redacción de copys creativos.",
-        image: "https://images.unsplash.com/photo-1512314889357-e157c22f938d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        tags: ["Planeación", "Creatividad"],
+        description: "Camarógrafo, realizador y moderador digital. Aporte creativo en puesta en escena.",
+        image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        tags: ["Cámaras", "Streaming", "Liderazgo"],
         link: "#"
     },
     {
@@ -130,14 +138,6 @@ const projects = [
         description: "Liderazgo en pequeños proyectos de mejora interna y logística de eventos corporativos.",
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         tags: ["Liderazgo", "Logística"],
-        link: "#"
-    },
-    {
-        title: "Fotografía de Producto",
-        category: "contenido",
-        description: "Captura y edición de fotos para catálogo digital de productos.",
-        image: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        tags: ["Fotografía", "Catálogo"],
         link: "#"
     }
 ];
