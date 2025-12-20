@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andres Valencia | Portafolio Profesional</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        primary: '#f43f5e',
+                        secondary: '#0f172a',
+                        accent: '#fbbf24',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-secondary text-slate-300 font-sans antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-slate-700 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer group" onclick="window.scrollTo(0,0)">
+                    <span
+                        class="text-2xl font-serif font-bold text-white group-hover:text-primary transition-colors">AV<span
+                            class="text-primary">.</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="#sobre-mi"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Perfil</a>
+                        <a href="#proyectos"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Portafolio</a>
+                        <a href="#habilidades"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Habilidades</a>
+
+                        <a href="cv.html" target="_blank"
+                            class="hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium flex items-center gap-2"><i
+                                class="fas fa-file-alt"></i> CV</a>
+
+                        <!-- Social Icons Header -->
+                        <div class="flex space-x-4 items-center pl-4 border-l border-slate-700">
+                            <a href="https://www.facebook.com/share/15XhpVo8BbJ/" target="_blank"
+                                class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                                    class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/hablemosconfeligar?igsh=MWI5MGR3dXF5dGR2Ng=="
+                                target="_blank" class="text-slate-400 hover:text-pink-500 transition-colors"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@andres02064?_r=1&_t=ZS-92LGtCpXszE" target="_blank"
+                                class="text-slate-400 hover:text-white transition-colors"><i
+                                    class="fab fa-tiktok"></i></a>
+                            <a href="https://youtube.com/@andresfelipevalenciagarcia-d8t?si=mrnyyTJJAQAi4MiH"
+                                target="_blank" class="text-slate-400 hover:text-red-600 transition-colors"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
+
+                        <a href="#contacto"
+                            class="bg-primary hover:bg-rose-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105 shadow-lg shadow-rose-500/30">Hablemos</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMenu()"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-secondary border-b border-slate-700" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" onclick="toggleMenu()"
+                    class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
+                <a href="#sobre-mi" onclick="toggleMenu()"
+                    class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Perfil</a>
+                <a href="#proyectos" onclick="toggleMenu()"
+                    class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portafolio</a>
+                <a href="cv.html" target="_blank" onclick="toggleMenu()"
+                    class="text-slate-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Hoja de
+                    Vida</a>
+                <a href="#contacto" onclick="toggleMenu()"
+                    class="text-primary block px-3 py-2 rounded-md text-base font-bold">Hablemos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+
+        <!-- Fondo de Iconos Flotantes -->
+        <div class="comm-bg pointer-events-none">
+            <i class="fas fa-quote-left floating-icon i1"></i>
+            <i class="fas fa-file-contract floating-icon i2"></i>
+            <i class="fas fa-pen-nib floating-icon i3"></i>
+            <i class="fas fa-users floating-icon i4"></i>
+            <i class="fas fa-bullhorn floating-icon i5"></i>
+        </div>
+
+        <!-- Blobs decorativos de fondo -->
+        <div
+            class="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob z-0">
+        </div>
+        <div
+            class="absolute bottom-20 right-10 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000 z-0">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- Efecto Typewriter -->
+            <div class="typewriter inline-block mb-4">
+                <h2 class="text-accent font-semibold tracking-widest uppercase text-sm md:text-base">Comunicación •
+                    Gestión • Organización</h2>
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 font-serif tracking-tight reveal">
+                Hola, soy <br class="md:hidden"><span class="gradient-text">Andres Valencia</span>
+            </h1>
+            <p class="mt-6 max-w-2xl mx-auto text-xl text-slate-300 mb-10 leading-relaxed font-light reveal">
+                Comunicador Social y Asistente Administrativo. Combino la <b class="text-white">creatividad
+                    estratégica</b> con una <b class="text-white">gestión eficiente</b> para impulsar proyectos y
+                marcas.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 reveal">
+                <a href="#proyectos"
+                    class="px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-rose-600 md:py-4 md:text-lg transition-all shadow-lg shadow-rose-500/30 hover:shadow-rose-500/50">
+                    Ver Portafolio
+                </a>
+                <a href="#contacto"
+                    class="px-8 py-3 border border-slate-600 text-base font-medium rounded-full text-slate-300 hover:bg-slate-800 md:py-4 md:text-lg transition-all">
+                    <i class="far fa-envelope mr-2"></i> Contactar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mí Section -->
+    <section id="sobre-mi" class="py-20 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative group reveal order-2 md:order-1 img-hover-container rounded-lg">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <!-- 
+                         IMPORTANTE: Reemplaza 'src' con la ruta de tu imagen subida (ej. "image_3ad604.jpg" si está en la misma carpeta) 
+                         o la URL donde la tengas alojada.
+                    -->
+                    <img src="media/image/perfil.jpeg" alt="Foto de Perfil"
+                        class="relative rounded-lg shadow-xl w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500 z-10">
+                </div>
+                <div class="reveal order-1 md:order-2 text-justify">
+                    <h2 class="text-3xl font-bold text-white mb-6 font-serif">Perfil Profesional</h2>
+                    <p class="text-lg text-slate-400 mb-6 leading-relaxed">
+                        Soy un <strong>Comunicador Social y Asistente de Administración</strong> con 5 años de
+                        experiencia en la creación de contenido para redes sociales, desarrollando mi carrera
+                        principalmente en <strong>Variedades Marta GB</strong>.
+                    </p>
+                    <p class="text-lg text-slate-400 mb-6 leading-relaxed">
+                        Destaco por mi organización, proactividad y adaptabilidad, habilidades que me han permitido ser
+                        experto en gestión de proyectos, trabajo en equipo y gestión documental. Graduado en 2025, me
+                        entusiasma contribuir con mi experiencia y continuar mi desarrollo profesional.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 text-center mt-8">
+                        <div
+                            class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-primary transition-colors">
+                            <h3 class="text-3xl font-bold text-primary mb-1">5+</h3>
+                            <p class="text-sm text-slate-500">Años de Experiencia</p>
+                        </div>
+                        <div
+                            class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-accent transition-colors">
+                            <h3 class="text-3xl font-bold text-accent mb-1">2025</h3>
+                            <p class="text-sm text-slate-500">Año de Graduación</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="mt-20">
+            <h3 class="text-2xl font-bold text-white mb-10 text-center font-serif reveal">Mi Trayectoria</h3>
+            <div class="relative container mx-auto px-6 flex flex-col space-y-8">
+                <div
+                    class="absolute z-0 w-1 h-full bg-slate-700 shadow-md inset-0 left-17 md:mx-auto md:right-0 md:left-0">
+                </div>
+
+                <!-- Item 1: Variedades Marta GB -->
+                <div class="relative z-10 timeline-item reveal">
+                    <div class="timeline-img bg-primary shadow-lg shadow-rose-500/50">
+                        <i class="fas fa-briefcase text-white"></i>
+                    </div>
+                    <div class="timeline-content bg-slate-800 border border-slate-700 hover:border-primary">
+                        <h3 class="font-bold text-white text-lg">Administrador / Vendedor</h3>
+                        <p class="text-primary text-sm mb-2">Variedades Marta GB | 6 Años</p>
+                        <p class="text-slate-400 text-sm">Gestión integral de ventas, inventario y atención al cliente.
+                            Liderazgo en estrategias de fidelización.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Comunicación Social -->
+                <div class="relative z-10 timeline-item timeline-item-right reveal" style="transition-delay: 100ms">
+                    <div class="timeline-img bg-accent shadow-lg shadow-amber-500/50">
+                        <i class="fas fa-graduation-cap text-slate-900"></i>
+                    </div>
+                    <div class="timeline-content bg-slate-800 border border-slate-700 hover:border-accent">
+                        <h3 class="font-bold text-white text-lg">Comunicación Social</h3>
+                        <p class="text-accent text-sm mb-2">Fundación Universitaria de Popayán | 2025</p>
+                        <p class="text-slate-400 text-sm">Formación profesional con enfoque en comunicación digital,
+                            gestión de proyectos y liderazgo comunitario.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Asistente Producción -->
+                <div class="relative z-10 timeline-item reveal" style="transition-delay: 200ms">
+                    <div class="timeline-img bg-cyan-500 shadow-lg shadow-cyan-500/50">
+                        <i class="fas fa-video text-white"></i>
+                    </div>
+                    <div class="timeline-content bg-slate-800 border border-slate-700 hover:border-cyan-500">
+                        <h3 class="font-bold text-white text-lg">Asistente de Producción</h3>
+                        <p class="text-cyan-400 text-sm mb-2">Telepacífico | 2 Meses</p>
+                        <p class="text-slate-400 text-sm">Apoyo logístico y técnico en producciones televisivas.
+                            Coordinación de equipos en set.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: Asistencia Administrativa -->
+                <div class="relative z-10 timeline-item timeline-item-right reveal" style="transition-delay: 300ms">
+                    <div class="timeline-img bg-green-500 shadow-lg shadow-green-500/50">
+                        <i class="fas fa-file-alt text-white"></i>
+                    </div>
+                    <div class="timeline-content bg-slate-800 border border-slate-700 hover:border-green-500">
+                        <h3 class="font-bold text-white text-lg">Asistencia Administrativa</h3>
+                        <p class="text-green-400 text-sm mb-2">SENA | 2 años</p>
+                        <p class="text-slate-400 text-sm">Técnico en gestión documental, servicio al cliente y procesos
+                            administrativos eficientes.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades Section -->
+    <section id="habilidades" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-serif">Mis Competencias</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="skills-container">
+                <!-- Se generan con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos" class="py-20 bg-slate-800/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 font-serif">Experiencia & Portafolio</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Una muestra de mi trabajo en gestión, contenido y
+                    administración.</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
+                <button
+                    class="filter-btn active px-6 py-2 rounded-full border border-slate-600 text-slate-300 hover:text-white text-sm font-medium"
+                    onclick="filterProjects('all', this)">Todos</button>
+                <button
+                    class="filter-btn px-6 py-2 rounded-full border border-slate-600 text-slate-300 hover:text-white text-sm font-medium"
+                    onclick="filterProjects('admin', this)">Administración</button>
+                <button
+                    class="filter-btn px-6 py-2 rounded-full border border-slate-600 text-slate-300 hover:text-white text-sm font-medium"
+                    onclick="filterProjects('social', this)">Redes Sociales</button>
+                <button
+                    class="filter-btn px-6 py-2 rounded-full border border-slate-600 text-slate-300 hover:text-white text-sm font-medium"
+                    onclick="filterProjects('contenido', this)">Contenido</button>
+            </div>
+
+            <!-- Grid de Proyectos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+                <!-- Se generan con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-20 reveal">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="bg-slate-800 rounded-2xl p-8 md:p-12 shadow-2xl border border-slate-700 relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20">
+                </div>
+
+                <div class="text-center mb-10 relative z-10">
+                    <h2 class="text-3xl font-bold text-white mb-4 font-serif">Trabajemos Juntos</h2>
+                    <p class="text-slate-400">¿Buscas organización, creatividad y compromiso para tu equipo?</p>
+                </div>
+
+                <form id="contact-form" class="space-y-6 relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-400 mb-2">Nombre</label>
+                            <input type="text" id="name" name="nombre" required
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                                placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-400 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                                placeholder="tu@email.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-400 mb-2">Mensaje</label>
+                        <textarea id="message" name="mensaje" rows="4" required
+                            class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
+                            placeholder="¿En qué puedo aportar a tu empresa?"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-primary hover:bg-rose-600 text-white font-bold py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-rose-500/25">
+                        Enviar Mensaje
+                    </button>
+                </form>
+                <div id="success-message"
+                    class="hidden mt-4 p-4 bg-green-900/50 text-green-200 rounded-lg text-center border border-green-700 relative z-10">
+                    <i class="fas fa-check-circle mr-2"></i> ¡Mensaje enviado! Te responderé lo antes posible.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-8 mb-8">
+                <a href="https://www.facebook.com/share/15XhpVo8BbJ/" target="_blank"
+                    class="text-slate-400 hover:text-blue-600 transition-colors text-2xl" title="Facebook"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/hablemosconfeligar?igsh=MWI5MGR3dXF5dGR2Ng==" target="_blank"
+                    class="text-slate-400 hover:text-pink-500 transition-colors text-2xl" title="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@andres02064?_r=1&_t=ZS-92LGtCpXszE" target="_blank"
+                    class="text-slate-400 hover:text-white transition-colors text-2xl" title="TikTok"><i
+                        class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com/@andresfelipevalenciagarcia-d8t?si=mrnyyTJJAQAi4MiH" target="_blank"
+                    class="text-slate-400 hover:text-red-600 transition-colors text-2xl" title="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+            <p class="text-slate-500 text-sm">
+                &copy; <span id="year"></span> Andres Valencia. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573126233264" target="_blank"
+        class="whatsapp-btn bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-[#20bd5a] transition-all"
+        title="Chatea con nosotros">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Skill Modal -->
+    <div id="skill-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <!-- Background backdrop -->
+        <div class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity opacity-0" id="modal-backdrop">
+        </div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+
+                <div class="relative transform overflow-hidden rounded-2xl bg-slate-800 border border-slate-700 text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-lg opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    id="modal-panel">
+
+                    <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block">
+                        <button type="button" onclick="closeSkillModal()"
+                            class="rounded-md bg-transparent text-slate-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-slate-800 transition-colors">
+                            <span class="sr-only">Cerrar</span>
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+
+                    <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                            <div class="mx-auto flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-slate-900 border border-slate-700 sm:mx-0 sm:h-12 sm:w-12 transition-transform hover:scale-110 duration-300"
+                                id="modal-icon-container">
+                                <i class="fas fa-check text-2xl" id="modal-icon"></i>
+                            </div>
+                            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left w-full">
+                                <h3 class="text-2xl font-bold leading-6 text-white font-serif mb-2" id="modal-title">
+                                    Titulo Competencia</h3>
+                                <div class="mt-4">
+                                    <ul class="text-sm text-slate-400 space-y-3 text-left" id="modal-details">
+                                        <!-- Detalles generados dinamicamente -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-slate-900/50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 border-t border-slate-700/50">
+                        <button type="button" onclick="closeSkillModal()"
+                            class="inline-flex w-full justify-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-rose-600 sm:ml-3 sm:w-auto transition-all hover:shadow-lg hover:shadow-primary/25">Cerrar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot hidden md:block" data-cursor-dot></div>
+    <div class="cursor-outline hidden md:block" data-cursor-outline></div>
+
+    <!-- JavaScript Principal -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

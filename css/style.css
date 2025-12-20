@@ -1,0 +1,332 @@
+/* Estilos base */
+.glass-nav {
+    background: rgba(15, 23, 42, 0.90);
+    backdrop-filter: blur(10px);
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #f43f5e, #fbbf24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- ANIMACIONES SCROLL REUTILIZABLES (Bidireccionales) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* --- EFECTOS HOVER IMAGENES --- */
+.img-hover-container {
+    overflow: hidden;
+}
+
+.img-hover-container img {
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.img-hover-container:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* --- FILTROS --- */
+.filter-btn {
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: #f43f5e;
+    color: white;
+    border-color: #f43f5e;
+    box-shadow: 0 4px 14px 0 rgba(244, 63, 94, 0.39);
+}
+
+/* --- EFECTOS DE COMUNICADOR (Iconos Flotantes) --- */
+.comm-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.floating-icon {
+    position: absolute;
+    color: rgba(244, 63, 94, 0.1);
+    font-size: 2rem;
+    animation: floatUp 15s linear infinite;
+    bottom: -50px;
+}
+
+.i1 {
+    left: 10%;
+    font-size: 3rem;
+    animation-duration: 18s;
+    animation-delay: 0s;
+}
+
+.i2 {
+    left: 30%;
+    font-size: 1.5rem;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.i3 {
+    left: 50%;
+    font-size: 4rem;
+    animation-duration: 20s;
+    animation-delay: 5s;
+}
+
+.i4 {
+    left: 70%;
+    font-size: 2rem;
+    animation-duration: 15s;
+    animation-delay: 1s;
+}
+
+.i5 {
+    left: 90%;
+    font-size: 2.5rem;
+    animation-duration: 17s;
+    animation-delay: 3s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.3;
+    }
+
+    90% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* --- TYPEWRITER --- */
+.typewriter h2 {
+    overflow: hidden;
+    border-right: .15em solid #f43f5e;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .10em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #f43f5e;
+    }
+}
+
+/* --- BLOBS --- */
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 10s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+/* --- WHATSAPP BOTTOM RIGHT --- */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    animation: pulse-green 2s infinite;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+    animation: none;
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* --- CUSTOM CURSOR --- */
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: none;
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+    }
+
+    .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #f43f5e;
+    }
+
+    .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(244, 63, 94, 0.5);
+        transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+    }
+
+    /* Clase que añadiremos con JS al hacer hover */
+    body.hovering .cursor-dot {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+
+    body.hovering .cursor-outline {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(244, 63, 94, 0.1);
+        border-color: transparent;
+    }
+}
+
+/* --- TIMELINE COMPONENT --- */
+
+/* Base Item */
+.timeline-item {
+    position: relative;
+    width: 100%;
+}
+
+.timeline-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    /* Mobile: Line is roughly at 32px (left-8 in HTML) */
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.timeline-content {
+    margin-left: 4rem;
+    /* Mobile spacing */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    .left-17 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    /* Left items (default) */
+    .timeline-item:nth-child(odd) {
+        left: 0;
+        padding-right: 3rem;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-img {
+        left: auto;
+        right: -1.5rem;
+        /* Half of 3rem width */
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        margin-left: 0;
+    }
+
+    /* Right items */
+    .timeline-item:nth-child(even) {
+        left: 50%;
+        padding-left: 3rem;
+    }
+
+    .timeline-item:nth-child(even) .timeline-img {
+        left: -1.5rem;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 0;
+    }
+}
