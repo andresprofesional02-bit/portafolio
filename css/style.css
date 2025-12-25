@@ -23,6 +23,23 @@
     transform: scale(1.05);
 }
 
+/* Ticker Animation */
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-ticker {
+    animation: ticker 35s linear infinite;
+    white-space: nowrap;
+    display: inline-block;
+}
+
 /* --- FILTROS --- */
 .filter-btn {
     transition: all 0.3s ease;

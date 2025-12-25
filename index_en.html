@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -84,13 +84,13 @@
                 <!-- Date / Vol / Dark Mode -->
                 <div
                     class="hidden md:flex flex-col text-xs font-sans tracking-widest text-gray-500 uppercase w-1/3 dark:text-gray-400 space-y-2">
-                    <span id="current-date" data-i18n="date_static">Sábado, 24 Diciembre 2025</span>
+                    <span id="current-date">Saturday, December 24, 2025</span>
                     <div class="flex items-center gap-2">
-                        <span data-i18n="vol">Vol. 1 - Edición Especial</span>
+                        <span>Vol. 1 - Special Edition</span>
                         <span class="text-primary font-bold">|</span>
-                        <span class="flex items-center gap-1" title="Clima Creativo">
+                        <span class="flex items-center gap-1" title="Creative Climate">
                             <i class="fas fa-sun text-yellow-500 animate-spin-slow"></i>
-                            <span data-i18n="weather">32°C - Soleado para ideas</span>
+                            <span>32°C - Sunny for ideas</span>
                         </span>
                     </div>
                 </div>
@@ -100,9 +100,8 @@
                     <h1
                         class="text-4xl md:text-6xl font-black font-serif tracking-tighter uppercase border-b-2 border-black inline-block pb-1 dark:text-white dark:border-white">
                         VALENCIA COMUNICA</h1>
-                    <p class="text-xs font-sans tracking-[0.3em] uppercase mt-1 text-primary font-bold"
-                        data-i18n="tagline">Comunicación con
-                        Impacto</p>
+                    <p class="text-xs font-sans tracking-[0.3em] uppercase mt-1 text-primary font-bold">Communication
+                        with Impact</p>
                 </div>
 
                 <!-- Social Links / CTA / Language -->
@@ -111,7 +110,7 @@
                     <div class="flex items-center gap-4">
                         <button id="theme-toggle"
                             class="hover:text-primary transition-colors flex items-center gap-2 font-bold group text-xs uppercase tracking-widest"
-                            title="Cambiar Tema">
+                            title="Toggle Theme">
                             <button id="theme-toggle-btn" onclick="toggleDarkMode()" class="hover:text-primary"><i
                                     class="fas fa-moon group-hover:rotate-12 transition-transform"></i></button>
                         </button>
@@ -120,16 +119,16 @@
                         <div class="relative group">
                             <button id="lang-btn" onclick="toggleLanguageMenu()"
                                 class="flex items-center gap-1 text-xs font-bold uppercase hover:text-primary transition-colors">
-                                <i class="fas fa-globe"></i> <span id="current-lang-display">ES</span> <i
+                                <i class="fas fa-globe"></i> <span id="current-lang-display">EN</span> <i
                                     class="fas fa-chevron-down text-[10px]"></i>
                             </button>
                             <!-- Dropdown Menu -->
                             <div id="lang-menu"
                                 class="absolute right-0 top-full mt-1 w-24 bg-white border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hidden z-50 dark:bg-slate-800 dark:border-white dark:shadow-[4px_4px_0px_rgba(255,255,255,0.5)]">
+                                <a href="index.html"
+                                    class="block w-full text-left px-3 py-2 text-xs font-bold hover:bg-gray-100 dark:hover:bg-slate-700 dark:text-white">ESPAÑOL</a>
                                 <button disabled
-                                    class="block w-full text-left px-3 py-2 text-xs font-bold bg-gray-200 cursor-default dark:bg-slate-600 dark:text-gray-300">ESPAÑOL</button>
-                                <a href="index_en.html"
-                                    class="block w-full text-left px-3 py-2 text-xs font-bold hover:bg-gray-100 dark:hover:bg-slate-700 dark:text-white">ENGLISH</a>
+                                    class="block w-full text-left px-3 py-2 text-xs font-bold bg-gray-200 cursor-default dark:bg-slate-600 dark:text-gray-300">ENGLISH</button>
                             </div>
                         </div>
 
@@ -145,8 +144,7 @@
 
                     <!-- Bottom Row: CTA -->
                     <a href="#contacto"
-                        class="bg-secondary text-white px-6 py-2 font-sans text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors border-2 border-transparent hover:border-black dark:border-white w-auto"
-                        data-i18n="subscribe">Suscribirse</a>
+                        class="bg-secondary text-white px-6 py-2 font-sans text-xs font-bold uppercase tracking-widest hover:bg-primary transition-colors border-2 border-transparent hover:border-black dark:border-white w-auto">Subscribe</a>
                 </div>
             </div>
 
@@ -157,23 +155,18 @@
             <div
                 class="hidden md:flex justify-center py-3 space-x-12 font-sans text-sm font-bold uppercase tracking-wider dark:text-gray-200">
                 <a href="#inicio"
-                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4"
-                    data-i18n="nav_home">Portada</a>
+                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4">Front
+                    Page</a>
                 <a href="#sobre-mi"
-                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4"
-                    data-i18n="nav_about">Editorial</a>
+                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4">Editorial</a>
                 <a href="#habilidades"
-                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4"
-                    data-i18n="nav_skills">Clasificados</a>
+                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4">Classifieds</a>
                 <a href="#blog"
-                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4"
-                    data-i18n="nav_blog">Opinión</a>
+                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4">Opinion</a>
                 <a href="#proyectos"
-                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4"
-                    data-i18n="nav_projects">Reportajes</a>
+                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4">Reports</a>
                 <a href="#contacto"
-                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4"
-                    data-i18n="nav_contact">Cartas</a>
+                    class="hover:text-primary transition-colors hover:underline decoration-2 underline-offset-4">Letters</a>
             </div>
         </div>
 
@@ -181,20 +174,17 @@
         <div class="md:hidden hidden bg-paper border-b border-black absolute w-full top-full left-0 z-50 shadow-xl"
             id="mobile-menu">
             <div class="flex flex-col p-4 space-y-4 font-sans font-bold uppercase text-center">
-                <a href="#inicio" onclick="toggleMenu()" class="hover:text-primary" data-i18n="nav_home">Portada</a>
-                <a href="#sobre-mi" onclick="toggleMenu()" class="hover:text-primary"
-                    data-i18n="nav_about">Editorial</a>
-                <a href="#habilidades" onclick="toggleMenu()" class="hover:text-primary"
-                    data-i18n="nav_skills">Clasificados</a>
-                <a href="#blog" onclick="toggleMenu()" class="hover:text-primary" data-i18n="nav_blog">Opinión</a>
-                <a href="#proyectos" onclick="toggleMenu()" class="hover:text-primary"
-                    data-i18n="nav_projects">Galería</a>
-                <a href="#contacto" onclick="toggleMenu()" class="text-primary" data-i18n="nav_contact">Contacto</a>
+                <a href="#inicio" onclick="toggleMenu()" class="hover:text-primary">Front Page</a>
+                <a href="#sobre-mi" onclick="toggleMenu()" class="hover:text-primary">Editorial</a>
+                <a href="#habilidades" onclick="toggleMenu()" class="hover:text-primary">Classifieds</a>
+                <a href="#blog" onclick="toggleMenu()" class="hover:text-primary">Opinion</a>
+                <a href="#proyectos" onclick="toggleMenu()" class="hover:text-primary">Gallery</a>
+                <a href="#contacto" onclick="toggleMenu()" class="text-primary">Contact</a>
                 <!-- Mobile Actions -->
                 <div class="flex justify-center gap-4 py-2">
-                    <button onclick="changeLanguage('es')" class="font-bold">ES</button>
+                    <a href="index.html" class="font-bold">ES</a>
                     <span>|</span>
-                    <button onclick="changeLanguage('en')" class="font-bold">EN</button>
+                    <span class="font-bold text-gray-400 cursor-default">EN</span>
                 </div>
                 <div class="flex justify-center gap-4 pt-4 border-t border-gray-200">
                     <a href="https://www.facebook.com/share/15XhpVo8BbJ/" target="_blank"><i
@@ -212,17 +202,17 @@
     <div
         class="bg-black text-white py-2 overflow-hidden border-b-4 border-primary relative z-40 dark:bg-slate-800 dark:border-white">
         <div class="animate-ticker inline-block font-mono text-sm tracking-wider uppercase">
-            <span class="mx-4">🔴 <span>ÚLTIMA HORA: Andrés Valencia disponible para nuevos
-                    proyectos en Enero 2025</span></span>
+            <span class="mx-4">🔴 <span>BREAKING NEWS: Andrés Valencia available for new projects in January
+                    2025</span></span>
             <span class="mx-4">|</span>
-            <span class="mx-4">Gestión Eficiente garantizada para su empresa</span>
+            <span class="mx-4">Efficient Management guaranteed for your business</span>
             <span class="mx-4">|</span>
-            <span class="mx-4">Experto en Ventas y Administración busca nuevos retos</span>
+            <span class="mx-4">Sales & Administration Expert seeking new challenges</span>
             <span class="mx-4">|</span>
-            <span class="mx-4">Contáctenos hoy mismo para una consultoría gratuita</span>
+            <span class="mx-4">Contact us today for a free consultation</span>
             <span class="mx-4">|</span>
-            <span class="mx-4">🔴 <span>ÚLTIMA HORA: Andrés Valencia disponible para nuevos
-                    proyectos en Enero 2025</span></span>
+            <span class="mx-4">🔴 <span>BREAKING NEWS: Andrés Valencia available for new projects in January
+                    2025</span></span>
         </div>
     </div>
 
@@ -233,51 +223,49 @@
         <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
 
             <div class="mb-4 inline-block border-b-2 border-primary pb-1">
-                <span class="text-primary font-sans font-bold tracking-widest uppercase text-sm">Noticia de Última
-                    Hora</span>
+                <span class="text-primary font-sans font-bold tracking-widest uppercase text-sm">Breaking News</span>
             </div>
 
             <h1
                 class="text-6xl md:text-8xl font-black text-secondary mb-6 font-serif tracking-tight leading-none reveal dark:text-white">
                 ANDRÉS <br>
-                <span class="italic font-light">TRANSFORMA LA</span> <br>
-                COMUNICACIÓN
+                <span class="italic font-light">TRANSFORMS</span> <br>
+                COMMUNICATION
             </h1>
 
             <div
                 class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 my-8 font-serif text-lg md:text-xl italic text-gray-600 border-y border-gray-300 py-4 max-w-3xl mx-auto dark:text-gray-400 dark:border-gray-700">
-                <span>"Gestión Eficiente"</span>
+                <span>"Efficient Management"</span>
                 <span class="w-2 h-2 rounded-full bg-primary"></span>
-                <span>"Creatividad Estratégica"</span>
+                <span>"Strategic Creativity"</span>
                 <span class="w-2 h-2 rounded-full bg-primary"></span>
-                <span>"Compromiso Total"</span>
+                <span>"Total Commitment"</span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-12 max-w-4xl mx-auto">
                 <div class="col-span-1 md:col-span-2">
                     <p
                         class="first-letter:text-6xl first-letter:float-left first-letter:mr-3 first-letter:font-black first-letter:text-secondary text-gray-800 leading-relaxed font-serif text-lg text-justify border-r-0 md:border-r border-gray-300 pr-0 md:pr-8 dark:text-gray-300 dark:first-letter:text-white dark:border-gray-700">
-                        cali, Colombia — En un mundo digital saturado, encontrar un profesional que combine la
-                        <strong>organización administrativa</strong> con la <strong>pasión comunicativa</strong> es una
-                        rareza. Andrés Valencia García emerge como esa figura clave, listo para redefinir cómo las
-                        marcas y proyectos conectan con sus audiencias. Con más de dos años de experiencia en el campo,
-                        su enfoque no es solo "hacer el trabajo", sino contar la historia detrás de él.
+                        Cali, Colombia — In a saturated digital world, finding a professional who combines
+                        <strong>administrative organization</strong> with <strong>communicative passion</strong> is a
+                        rarity. Andrés Valencia García is not just a manager; he is a strategist who understands that
+                        every file, every script, and every client tells a story.
                     </p>
                 </div>
                 <div class="col-span-1 flex flex-col justify-center space-y-4">
                     <div class="bg-gray-100 p-4 border border-gray-300 dark:bg-slate-900 dark:border-slate-700">
-                        <p class="font-sans text-xs font-bold uppercase text-gray-500 mb-2 dark:text-gray-400">En esta
-                            edición:</p>
+                        <p class="font-sans text-xs font-bold uppercase text-gray-500 mb-2 dark:text-gray-400">In this
+                            edition:</p>
                         <ul
                             class="space-y-2 text-sm font-serif underline decoration-primary/30 decoration-2 underline-offset-2 dark:text-gray-300">
-                            <li><a href="#proyectos" class="hover:text-primary">Reportaje: Telepacífico</a></li>
-                            <li><a href="#habilidades" class="hover:text-primary">Análisis: El poder de la voz</a></li>
-                            <li><a href="#contacto" class="hover:text-primary">Columna: Trabajemos Juntos</a></li>
+                            <li><a href="#proyectos" class="hover:text-primary">Report: Telepacífico</a></li>
+                            <li><a href="#habilidades" class="hover:text-primary">Analysis: The Power of Voice</a></li>
+                            <li><a href="#contacto" class="hover:text-primary">Column: Let's Work Together</a></li>
                         </ul>
                     </div>
                     <a href="#proyectos"
                         class="block w-full bg-secondary text-white text-center font-sans font-bold uppercase py-3 border-2 border-secondary hover:bg-transparent hover:text-secondary transition-all dark:bg-white dark:text-black dark:border-white dark:hover:bg-transparent dark:hover:text-white">
-                        Leer Edición Completa
+                        Read Full Edition
                     </a>
                 </div>
             </div>
@@ -285,7 +273,7 @@
         </div>
     </section>
 
-    <!-- Editorial (Sobre Mí) Section -->
+    <!-- Editorial (About Me) Section -->
     <section id="sobre-mi" class="py-20 border-t-2 border-black bg-white dark:bg-paper-dark dark:border-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
@@ -294,25 +282,24 @@
                 <div class="md:col-span-8 md:border-r border-gray-300 md:pr-12 dark:border-gray-700">
                     <span
                         class="font-sans font-bold text-xs uppercase tracking-widest text-gray-400 mb-2 block dark:text-gray-400">Editorial</span>
-                    <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-8 font-serif dark:text-white">El Arte de
-                        Gestionar y
-                        Comunicar</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-8 font-serif dark:text-white">The Art of
+                        Managing and Communicating</h2>
 
                     <div class="mb-8">
                         <p
                             class="first-letter:text-6xl first-letter:float-left first-letter:mr-3 first-letter:font-black first-letter:text-secondary text-gray-800 leading-relaxed font-serif text-lg text-justify dark:text-gray-300 dark:first-letter:text-white">
-                            Para ser un comunicador efectivo hoy en día, no basta con tener una voz; hay que tener un
-                            plan. Andrés Valencia García entiende esto a la perfección. Con una sólida formación como
-                            Comunicador Social y un énfasis técnico en administración, ha construido un perfil híbrido
-                            que es esencial en la era moderna.<br><br>Su trayectoria de más de dos años abarca desde la
-                            rigurosa producción audiovisual en Telepacífico hasta la dinámica interacción con audiencias
-                            en entornos religiosos y comerciales.
+                            To be an effective communicator today, it is not enough to have a voice; you must have a
+                            plan. Andrés Valencia García understands this perfectly. With a solid background as a Social
+                            Communicator and a technical emphasis on administration, he has built a hybrid profile that
+                            is essential in the modern era.<br><br>His trajectory of over two years spans from rigorous
+                            audiovisual production at Telepacífico to dynamic interaction with audiences in religious
+                            and commercial environments.
                         </p>
                     </div>
                     <p
                         class="text-lg text-gray-700 mb-6 leading-relaxed font-serif text-justify border-l-4 border-primary pl-6 italic dark:text-gray-300">
-                        "Me caracterizo por mi compromiso, responsabilidad y capacidad de trabajo en entornos
-                        colaborativos. La presión no es un obstáculo, es el combustible."
+                        "I am characterized by my commitment, responsibility, and ability to work in collaborative
+                        environments. Pressure is not an obstacle, it is fuel."
                     </p>
                 </div>
 
@@ -320,7 +307,7 @@
                 <div class="md:col-span-4 flex flex-col gap-8">
                     <div
                         class="relative group border-4 border-black p-2 bg-white shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all dark:bg-secondary dark:border-white dark:shadow-[8px_8px_0px_rgba(255,255,255,0.5)]">
-                        <img src="media/image/perfil.jpeg" alt="Foto de Perfil"
+                        <img src="media/image/perfil.jpeg" alt="Profile Picture"
                             class="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-500 filter contrast-125">
                         <div class="mt-2 text-center border-t border-black pt-2 dark:border-white">
                             <p class="font-sans text-xs font-bold uppercase dark:text-white">Fig. 1: Andrés Felipe
@@ -331,24 +318,22 @@
                     <div class="bg-paper border border-gray-300 p-6 dark:bg-slate-900 dark:border-gray-700">
                         <h3
                             class="font-bold text-xl mb-4 font-serif border-b border-black pb-2 dark:text-white dark:border-white">
-                            En Cifras</h3>
+                            In Figures</h3>
                         <div class="space-y-6">
                             <div>
                                 <h4 class="text-4xl font-black text-secondary dark:text-white">2.5+</h4>
                                 <p class="text-sm font-sans uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                                    Años de experiencia
-                                </p>
+                                    Years of Experience</p>
                             </div>
                             <div>
                                 <h4 class="text-4xl font-black text-secondary dark:text-white">2025</h4>
                                 <p class="text-sm font-sans uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                                    Graduación Univer.
-                                </p>
+                                    Univ. Graduation</p>
                             </div>
                             <div>
                                 <h4 class="text-4xl font-black text-secondary dark:text-white">100%</h4>
                                 <p class="text-sm font-sans uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                                    Compromiso</p>
+                                    Commitment</p>
                             </div>
                         </div>
                     </div>
@@ -357,11 +342,11 @@
             </div>
         </div>
 
-        <!-- Timeline Section (Trayectoria) -->
+        <!-- Timeline Section -->
         <div class="mt-20 pt-10 border-t border-gray-300 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 dark:border-gray-700">
             <h3
                 class="text-2xl font-bold text-secondary mb-10 text-center font-serif uppercase tracking-widest border-b-2 border-black inline-block mx-auto pb-2 dark:text-white dark:border-white">
-                Trayectoria Profesional</h3>
+                Professional Career</h3>
 
             <div class="relative container mx-auto px-6 flex flex-col space-y-8">
                 <div class="absolute z-0 w-px h-full bg-black left-4 md:left-1/2 md:-ml-px dark:bg-white"></div>
@@ -374,14 +359,14 @@
                     </div>
                     <span
                         class="inline-block bg-black text-white text-xs font-bold px-2 py-1 mb-2 dark:bg-white dark:text-black">2026
-                        -
-                        Actualidad</span>
-                    <h3 class="font-bold text-secondary text-xl font-serif dark:text-white">Vocal Comunicaciones</h3>
+                        - Present</span>
+                    <h3 class="font-bold text-secondary text-xl font-serif dark:text-white">Communications Vocal</h3>
                     <p class="text-primary text-sm font-bold mb-2">Iglesia Pentecostal Unida de Colombia</p>
-                    <p class="text-gray-700 text-sm font-serif dark:text-gray-300">Camarógrafo, realizador y moderador
-                        digital. Manejo
-                        profesional de cámaras y aporte creativo en puesta en escena.</p>
+                    <p class="text-gray-700 text-sm font-serif dark:text-gray-300">Cameraman, producer, and digital
+                        moderator. Professional camera handling and creative input in staging.</p>
                 </div>
+
+
 
                 <!-- Item 3: Comunicación Social -->
                 <div
@@ -391,12 +376,11 @@
                     </div>
                     <span
                         class="inline-block bg-gray-200 text-black text-xs font-bold px-2 py-1 mb-2 dark:bg-slate-700 dark:text-white">2025</span>
-                    <h3 class="font-bold text-secondary text-xl font-serif dark:text-white">Comunicación Social</h3>
+                    <h3 class="font-bold text-secondary text-xl font-serif dark:text-white">Social Communication</h3>
                     <p class="text-gray-500 text-sm font-bold mb-2 dark:text-gray-400">Fundación Universitaria de
                         Popayán</p>
-                    <p class="text-gray-700 text-sm font-serif dark:text-gray-300">Formación profesional con enfoque en
-                        comunicación
-                        digital, gestión de proyectos y liderazgo comunitario.</p>
+                    <p class="text-gray-700 text-sm font-serif dark:text-gray-300">Professional training focused on
+                        digital communication, project management, and community leadership.</p>
                 </div>
 
                 <!-- Item 4: Practicante Producción -->
@@ -406,12 +390,11 @@
                         class="absolute top-6 -left-4 md:-right-9 w-6 h-6 bg-white border-4 border-black rounded-full z-20 dark:bg-slate-800 dark:border-white">
                     </div>
                     <span
-                        class="inline-block bg-white border border-black text-black text-xs font-bold px-2 py-1 mb-2 dark:bg-slate-800 dark:border-white dark:text-white">Prácticas</span>
-                    <h3 class="font-bold text-secondary text-xl font-serif dark:text-white">Practicante Producción</h3>
+                        class="inline-block bg-white border border-black text-black text-xs font-bold px-2 py-1 mb-2 dark:bg-slate-800 dark:border-white dark:text-white">Internship</span>
+                    <h3 class="font-bold text-secondary text-xl font-serif dark:text-white">Production Intern</h3>
                     <p class="text-gray-500 text-sm font-bold mb-2 dark:text-gray-400">Telepacífico</p>
-                    <p class="text-gray-700 text-sm font-serif dark:text-gray-300">Creación de guiones, continuidades,
-                        productor de piso.
-                        Encargado de programación de visitantes.</p>
+                    <p class="text-gray-700 text-sm font-serif dark:text-gray-300">Script creation, continuity, floor
+                        producer. In charge of visitor scheduling.</p>
                 </div>
 
                 <!-- Item 5: SENA -->
@@ -422,12 +405,10 @@
                     </div>
                     <span
                         class="inline-block bg-gray-200 text-black text-xs font-bold px-2 py-1 mb-2 dark:bg-slate-700 dark:text-white">2018</span>
-                    <h3 class="font-bold text-secondary text-xl font-serif dark:text-white">Técnico Asistencia Admin.
-                    </h3>
+                    <h3 class="font-bold text-secondary text-xl font-serif dark:text-white">Admin. Assistance Tech</h3>
                     <p class="text-gray-500 text-sm font-bold mb-2 dark:text-gray-400">SENA</p>
-                    <p class="text-gray-700 text-sm font-serif dark:text-gray-300">Técnico en gestión documental,
-                        servicio al cliente y
-                        procesos administrativos eficientes.</p>
+                    <p class="text-gray-700 text-sm font-serif dark:text-gray-300">Technician in document management,
+                        customer service, and efficient administrative processes.</p>
                 </div>
 
             </div>
@@ -442,7 +423,7 @@
                     class="absolute top-1/2 left-0 w-full h-px bg-gray-300 transform -translate-y-1/2 -z-10 dark:bg-gray-700"></span>
                 <h2
                     class="text-3xl md:text-4xl font-black text-secondary bg-paper inline-block px-8 font-serif uppercase tracking-widest border-2 border-black p-2 shadow-[4px_4px_0px_rgba(0,0,0,1)] dark:bg-paper-dark dark:text-white dark:border-white dark:shadow-[4px_4px_0px_rgba(255,255,255,0.5)]">
-                    Clasificados: Competencias
+                    Classifieds: Skills
                 </h2>
             </div>
 
@@ -461,55 +442,55 @@
             <div class="mb-12 text-center reveal">
                 <span
                     class="inline-block border-b-2 border-primary mb-2 text-primary font-bold tracking-widest uppercase text-sm"
-                    data-i18n="blog_tag">Opinión & Análisis</span>
+                    data-i18n="blog_tag">Opinion & Analysis</span>
                 <h2 class="text-4xl md:text-5xl font-black font-serif uppercase dark:text-white" data-i18n="blog_title">
-                    Columnas Destacadas</h2>
+                    Featured Columns</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Article 1 -->
                 <div
                     class="border-2 border-black p-6 hover:shadow-[8px_8px_0px_#000] transition-all bg-white dark:bg-slate-800 dark:border-white dark:hover:shadow-[8px_8px_0px_#fff]">
-                    <span class="text-xs font-bold text-gray-500 uppercase block mb-2" data-i18n="blog_date_1">20
-                        Diciembre 2025</span>
-                    <h3 class="text-2xl font-bold font-serif mb-4 leading-tight dark:text-white" data-i18n="blog_h1">La
-                        Voz que Vende: El Poder del Tono</h3>
-                    <p class="text-gray-600 mb-6 font-serif line-clamp-3 dark:text-gray-300" data-i18n="blog_desc_1">En
-                        ventas, no es solo lo que dices, es cómo lo dices. Descubre cómo la modulación puede cerrar
-                        tratos...</p>
+                    <span class="text-xs font-bold text-gray-500 uppercase block mb-2" data-i18n="blog_date_1">December
+                        20, 2025</span>
+                    <h3 class="text-2xl font-bold font-serif mb-4 leading-tight dark:text-white" data-i18n="blog_h1">The
+                        Voice that Sells: The Power of Tone</h3>
+                    <p class="text-gray-600 mb-6 font-serif line-clamp-3 dark:text-gray-300" data-i18n="blog_desc_1">In
+                        sales, it's not just what you say, it's how you say it. Discover how modulation can close
+                        deals...</p>
                     <button onclick="openBlogModal(1)"
                         class="text-primary font-bold uppercase text-sm hover:underline decoration-2 underline-offset-4"
-                        data-i18n="read_more">Leer Columna Completa →</button>
+                        data-i18n="read_more">Read Full Column →</button>
                 </div>
 
                 <!-- Article 2 -->
                 <div
                     class="border-2 border-black p-6 hover:shadow-[8px_8px_0px_#000] transition-all bg-white dark:bg-slate-800 dark:border-white dark:hover:shadow-[8px_8px_0px_#fff]">
-                    <span class="text-xs font-bold text-gray-500 uppercase block mb-2" data-i18n="blog_date_2">18
-                        Diciembre 2025</span>
+                    <span class="text-xs font-bold text-gray-500 uppercase block mb-2" data-i18n="blog_date_2">December
+                        18, 2025</span>
                     <h3 class="text-2xl font-bold font-serif mb-4 leading-tight dark:text-white" data-i18n="blog_h2">
-                        Orden en el Caos Administrativo</h3>
-                    <p class="text-gray-600 mb-6 font-serif line-clamp-3 dark:text-gray-300" data-i18n="blog_desc_2">La
-                        eficiencia administrativa no es magia, es sistema. Estrategias clave para organizar flujos de
-                        trabajo...</p>
+                        Order in Administrative Chaos</h3>
+                    <p class="text-gray-600 mb-6 font-serif line-clamp-3 dark:text-gray-300" data-i18n="blog_desc_2">
+                        Administrative efficiency is not magic, it is a system. Key strategies to organize workflows...
+                    </p>
                     <button onclick="openBlogModal(2)"
                         class="text-primary font-bold uppercase text-sm hover:underline decoration-2 underline-offset-4"
-                        data-i18n="read_more">Leer Columna Completa →</button>
+                        data-i18n="read_more">Read Full Column →</button>
                 </div>
 
                 <!-- Article 3 -->
                 <div
                     class="border-2 border-black p-6 hover:shadow-[8px_8px_0px_#000] transition-all bg-white dark:bg-slate-800 dark:border-white dark:hover:shadow-[8px_8px_0px_#fff]">
-                    <span class="text-xs font-bold text-gray-500 uppercase block mb-2" data-i18n="blog_date_3">15
-                        Diciembre 2025</span>
-                    <h3 class="text-2xl font-bold font-serif mb-4 leading-tight dark:text-white" data-i18n="blog_h3">El
-                        Cliente Digital: Nueva Era</h3>
-                    <p class="text-gray-600 mb-6 font-serif line-clamp-3 dark:text-gray-300" data-i18n="blog_desc_3">La
-                        atención al cliente ha evolucionado. Ya no basta con responder, hay que anticipar y conectar...
-                    </p>
+                    <span class="text-xs font-bold text-gray-500 uppercase block mb-2" data-i18n="blog_date_3">December
+                        15, 2025</span>
+                    <h3 class="text-2xl font-bold font-serif mb-4 leading-tight dark:text-white" data-i18n="blog_h3">The
+                        Digital Client: New Era</h3>
+                    <p class="text-gray-600 mb-6 font-serif line-clamp-3 dark:text-gray-300" data-i18n="blog_desc_3">
+                        Customer service has evolved. It is no longer enough to respond, you have to anticipate and
+                        connect...</p>
                     <button onclick="openBlogModal(3)"
                         class="text-primary font-bold uppercase text-sm hover:underline decoration-2 underline-offset-4"
-                        data-i18n="read_more">Leer Columna Completa →</button>
+                        data-i18n="read_more">Read Full Column →</button>
                 </div>
             </div>
         </div>
@@ -519,28 +500,27 @@
     <section id="proyectos" class="py-20 border-t-2 border-black bg-white dark:bg-paper-dark dark:border-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-left mb-10 reveal border-b-4 border-primary pb-4">
-                <span class="font-sans font-bold text-xs uppercase tracking-widest text-primary mb-1 block">Galería &
-                    Reportajes</span>
-                <h2 class="text-4xl md:text-5xl font-black text-secondary font-serif dark:text-white">Crónicas de
-                    Gestión</h2>
-                <p class="text-gray-500 font-serif italic mt-2 dark:text-gray-400">Una mirada profunda al trabajo de
-                    campo.</p>
+                <span class="font-sans font-bold text-xs uppercase tracking-widest text-primary mb-1 block">Gallery &
+                    Reports</span>
+                <h2 class="text-4xl md:text-5xl font-black text-secondary font-serif dark:text-white">Management
+                    Chronicles</h2>
+                <p class="text-gray-500 font-serif italic mt-2 dark:text-gray-400">A deep look at field work.</p>
             </div>
 
             <!-- Filtros -->
             <div class="flex flex-wrap gap-4 mb-12 reveal font-sans text-xs font-bold uppercase">
                 <button
                     class="filter-btn active px-4 py-2 border border-black hover:bg-black hover:text-white transition-all dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black"
-                    onclick="filterProjects('all', this)" data-i18n="filter_all">Todas las Ediciones</button>
+                    onclick="filterProjects('all', this)">All Editions</button>
                 <button
                     class="filter-btn px-4 py-2 border border-black hover:bg-black hover:text-white transition-all text-gray-500 dark:border-white dark:text-gray-400 dark:hover:bg-white dark:hover:text-black"
-                    onclick="filterProjects('admin', this)" data-i18n="filter_admin">Sección Administración</button>
+                    onclick="filterProjects('admin', this)">Administration Section</button>
                 <button
                     class="filter-btn px-4 py-2 border border-black hover:bg-black hover:text-white transition-all text-gray-500 dark:border-white dark:text-gray-400 dark:hover:bg-white dark:hover:text-black"
-                    onclick="filterProjects('social', this)" data-i18n="filter_social">Sección Social</button>
+                    onclick="filterProjects('social', this)">Social Section</button>
                 <button
                     class="filter-btn px-4 py-2 border border-black hover:bg-black hover:text-white transition-all text-gray-500 dark:border-white dark:text-gray-400 dark:hover:bg-white dark:hover:text-black"
-                    onclick="filterProjects('contenido', this)" data-i18n="filter_content">Suplemento Contenido</button>
+                    onclick="filterProjects('contenido', this)">Content Supplement</button>
             </div>
 
             <!-- Grid de Proyectos -->
@@ -562,48 +542,48 @@
                 class="bg-white border-2 border-black p-8 md:p-12 shadow-[8px_8px_0px_rgba(0,0,0,1)] dark:bg-paper-dark dark:border-white dark:shadow-[8px_8px_0px_rgba(255,255,255,0.5)]">
 
                 <div class="text-center mb-10 border-b border-gray-300 pb-6 dark:border-gray-700">
+                    <span class="font-sans font-bold text-xs uppercase tracking-widest text-primary mb-2 block">Letters
+                        to the Editor</span>
                     <h2
                         class="text-3xl font-black text-secondary mb-2 font-serif uppercase tracking-tighter dark:text-white">
-                        ¿Tiene una Historia que Contar?</h2>
-                    <p class="text-gray-600 font-serif italic dark:text-gray-400">Escríbame. Estoy listo para la próxima
-                        asignación.</p>
+                        Get in Touch</h2>
+                    <p class="text-gray-600 font-serif italic dark:text-gray-400">We are ready to listen to your
+                        proposal.</p>
                 </div>
 
                 <form id="contact-form" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name"
-                                class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 dark:text-gray-300">Remitente</label>
+                                class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 dark:text-gray-300">Sender</label>
                             <input type="text" id="name" name="nombre" required
                                 class="w-full bg-gray-50 border-b-2 border-gray-300 focus:border-primary px-4 py-3 text-secondary font-serif focus:outline-none transition-colors rounded-none placeholder-gray-400 dark:bg-slate-800 dark:border-gray-600 dark:text-white"
-                                placeholder="Su nombre completo">
+                                placeholder="Your full name">
                         </div>
                         <div>
                             <label for="email"
-                                class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 dark:text-gray-300">Contacto</label>
+                                class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 dark:text-gray-300">Contact</label>
                             <input type="email" id="email" name="email" required
                                 class="w-full bg-gray-50 border-b-2 border-gray-300 focus:border-primary px-4 py-3 text-secondary font-serif focus:outline-none transition-colors rounded-none placeholder-gray-400 dark:bg-slate-800 dark:border-gray-600 dark:text-white"
-                                placeholder="correo@ejemplo.com">
+                                placeholder="email@example.com">
                         </div>
                     </div>
                     <div>
                         <label for="message"
-                            class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 dark:text-gray-300"
-                            data-i18n="form_message">Cuerpo
-                            del Mensaje</label>
+                            class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2 dark:text-gray-300">Message
+                            Body</label>
                         <textarea id="message" name="mensaje" rows="4" required
                             class="w-full bg-gray-50 border-2 border-gray-200 focus:border-primary px-4 py-3 text-secondary font-serif focus:outline-none transition-colors rounded-none placeholder-gray-400 dark:bg-slate-800 dark:border-gray-600 dark:text-white"
-                            placeholder="Describa su propuesta o consulta..."></textarea>
+                            placeholder="Describe your proposal or inquiry..."></textarea>
                     </div>
                     <button type="submit"
-                        class="w-full bg-secondary hover:bg-primary text-white font-bold font-sans uppercase tracking-widest py-4 border-2 border-transparent hover:border-black transition-all shadow-lg dark:bg-white dark:text-secondary dark:hover:bg-primary dark:hover:text-white dark:hover:border-white"
-                        data-i18n="form_submit">
-                        Enviar Carta
+                        class="w-full bg-secondary hover:bg-primary text-white font-bold font-sans uppercase tracking-widest py-4 border-2 border-transparent hover:border-black transition-all shadow-lg dark:bg-white dark:text-secondary dark:hover:bg-primary dark:hover:text-white dark:hover:border-white">
+                        Send Letter
                     </button>
                 </form>
                 <div id="success-message"
                     class="hidden mt-4 p-4 bg-gray-100 text-secondary border-l-4 border-green-500 text-center font-serif italic dark:bg-slate-800 dark:text-white">
-                    <i class="fas fa-check-circle mr-2"></i> Mensaje recibido en redacción.
+                    <i class="fas fa-check-circle mr-2"></i> Message received.
                 </div>
             </div>
         </div>
@@ -629,8 +609,7 @@
             </div>
             <div
                 class="flex flex-col md:flex-row justify-center items-center gap-4 text-xs font-sans uppercase tracking-widest text-gray-500">
-                <p class="text-sm font-mono text-gray-400">© 2025 Andrés Valencia. <span data-i18n="footer_rights">Todos
-                        los derechos reservados.</span></p>
+                <p class="text-sm font-mono text-gray-400">© 2025 Andrés Valencia. <span>All rights reserved.</span></p>
             </div>
 
             <div class="flex gap-6">
@@ -646,9 +625,8 @@
 
             <div class="text-center md:text-right">
                 <a href="https://kevorteg.github.io/portafolio/" target="_blank"
-                    class="text-xs font-mono text-gray-500 hover:text-white transition-colors duration-300 block mt-2"
-                    data-i18n="footer_credit">
-                    Edición Digital por Kevin Ortega
+                    class="text-xs font-mono text-gray-500 hover:text-white transition-colors duration-300 block mt-2">
+                    Digital Edition by Kevin Ortega
                 </a>
             </div>
         </div>
