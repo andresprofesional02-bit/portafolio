@@ -488,3 +488,26 @@ function toggleMenu() {
     const menu = document.getElementById('mobile-menu');
     if (menu) menu.classList.toggle('hidden');
 }
+// --- 7. CURRENT DATE LOGIC ---
+function updateDate() {
+    const dateElement = document.getElementById('current-date');
+    if (!dateElement) return;
+
+    const now = new Date();
+    const isEnglish = document.documentElement.lang === 'en' || window.location.pathname.includes('index_en.html');
+
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const lang = isEnglish ? 'en-US' : 'es-ES';
+
+    // Format: "Sábado, 25 de Diciembre de 2025"
+    let dateString = now.toLocaleDateString(lang, options);
+
+    // Capitalize for style
+    dateElement.textContent = dateString.toUpperCase();
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    // ... existing init code if any, or just run independent functions
+    updateDate();
+});
