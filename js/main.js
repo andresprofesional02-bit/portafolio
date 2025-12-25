@@ -18,85 +18,105 @@ const observer = new IntersectionObserver((entries) => {
 
 const skills = [
     {
-        name: "Producción Multimedia",
-        icon: "fas fa-video",
-        color: "text-red-500",
+        name: "Planificación y Org.",
+        icon: "fas fa-calendar-check",
+        color: "text-secondary",
         details: [
-            "Manejo profesional de cámaras y encuadres.",
-            "Transmisión, proyección e interacción en vivo.",
-            "Producción de piso y asistencia técnica."
+            "Gestión eficiente de tiempos y recursos.",
+            "Organización de eventos y agendas.",
+            "Priorización de tareas clave."
         ]
     },
     {
-        name: "Edición y Guiones",
-        icon: "fas fa-film",
-        color: "text-purple-500",
+        name: "Comunicación Asertiva",
+        icon: "fas fa-comments",
+        color: "text-secondary",
         details: [
-            "Creación de guiones y continuidades.",
-            "Edición de video y post-producción.",
-            "Capacidad de síntesis audiovisual."
-        ]
-    },
-    {
-        name: "Gestión Administrativa",
-        icon: "fas fa-folder-open",
-        color: "text-blue-400",
-        details: [
-            "Técnico en gestión documental y archivos.",
-            "Planificación y organización de procesos.",
-            "Implementación de sistemas eficientes."
-        ]
-    },
-    {
-        name: "Comunicación Estratégica",
-        icon: "fas fa-bullhorn",
-        color: "text-pink-500",
-        details: [
-            "Comunicación asertiva y ética.",
-            "Redacción de textos y copys.",
-            "Moderación digital y manejo de público."
+            "Expresión clara de ideas y objetivos.",
+            "Escucha activa y feedback constructivo.",
+            "Manejo adecuado del lenguaje verbal y no verbal."
         ]
     },
     {
         name: "Trabajo en Equipo",
         icon: "fas fa-users",
-        color: "text-green-500",
+        color: "text-secondary",
         details: [
-            "Capacitación de personal a cargo.",
-            "Liderazgo en equipos colaborativos.",
-            "Resolución de conflictos y mediación."
+            "Colaboración en entornos dinámicos.",
+            "Apoyo mutuo para el cumplimiento de metas.",
+            "Integración y buen clima laboral."
         ]
     },
     {
-        name: "Habilidades Blandas",
+        name: "Ética y Objetividad",
+        icon: "fas fa-balance-scale",
+        color: "text-secondary",
+        details: [
+            "Actuación con integridad y transparencia.",
+            "Toma de decisiones imparciales.",
+            "Compromiso con valores profesionales."
+        ]
+    },
+    {
+        name: "Producción Multimedia",
+        icon: "fas fa-video",
+        color: "text-secondary",
+        details: [
+            "Manejo de cámaras y equipos de grabación.",
+            "Asistencia de producción en piso.",
+            "Transmisión y proyección en vivo."
+        ]
+    },
+    {
+        name: "Edición Audiovisual",
+        icon: "fas fa-film",
+        color: "text-secondary",
+        details: [
+            "Post-producción de video y audio.",
+            "Elaboración de guiones y continuidades.",
+            "Narrativa visual coherente."
+        ]
+    },
+    {
+        name: "Pensamiento Crítico",
         icon: "fas fa-brain",
-        color: "text-yellow-400",
+        color: "text-secondary",
         details: [
-            "Pensamiento crítico y capacidad de análisis.",
-            "Curiosidad y asombro constante.",
-            "Trabajo bajo presión y adaptabilidad."
+            "Evaluación objetiva de situaciones.",
+            "Resolución de problemas complejos.",
+            "Propuesta de soluciones innovadoras."
         ]
     },
     {
-        name: "Servicio al Cliente",
-        icon: "fas fa-headset",
-        color: "text-cyan-400",
+        name: "Análisis y Síntesis",
+        icon: "fas fa-search-plus",
+        color: "text-secondary",
         details: [
-            "Atención personalizada y fidelización.",
-            "Manejo de PQRS y satisfacción del cliente.",
-            "Experiencia en ventas y mostrador."
+            "Interpretación de datos e información.",
+            "Resumen ejecutivo de contenidos.",
+            "Identificación de puntos clave."
         ]
     },
     {
-        name: "Herramientas Digitales",
-        icon: "fas fa-laptop-code",
-        color: "text-indigo-400",
+        name: "Creatividad",
+        icon: "fas fa-lightbulb",
+        color: "text-secondary",
         details: [
-            "Manejo de Office Suite y herramientas administrativas.",
-            "Gestión de redes sociales y comunidad digital.",
-            "Adaptación a nuevos softwares."
+            "Generación de ideas originales.",
+            "Enfoque innovador en proyectos.",
+            "Diseño de contenidos atractivos."
         ]
     },
+    {
+        name: "Trabajo bajo Presión",
+        icon: "fas fa-stopwatch",
+        color: "text-secondary",
+        details: [
+            "Mantenimiento de la calma en crisis.",
+            "Cumplimiento de plazos ajustados.",
+            "Adaptabilidad a cambios repentinos."
+        ]
+    }
 ];
 
 const projects = [
@@ -146,7 +166,7 @@ const projects = [
 const projectsContainer = document.getElementById('projects-container');
 
 function renderProjects(filter = 'all') {
-    if (!projectsContainer) return; // Guard clause
+    if (!projectsContainer) return;
 
     projectsContainer.innerHTML = '';
 
@@ -156,25 +176,23 @@ function renderProjects(filter = 'all') {
 
     filteredProjects.forEach((project, index) => {
         const tagsHtml = project.tags.map(tag =>
-            `<span class="px-2 py-1 text-xs font-semibold bg-slate-700 text-rose-300 rounded-md border border-slate-600">${tag}</span>`
+            `<span class="px-2 py-1 text-xs font-bold font-sans bg-gray-100 text-secondary uppercase border border-black dark:bg-slate-800 dark:text-gray-300 dark:border-gray-600">${tag}</span>`
         ).join('');
 
         const delay = index * 100;
 
+        // Newspaper Style Card with Dark Mode support
         const projectHtml = `
-            <div class="reveal bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-primary transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 group animate-in" style="transition-delay: ${delay}ms">
-                <div class="relative overflow-hidden h-52 img-hover-container">
-                    <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover z-0">
-                    <div class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4 z-10">
-                        <a href="${project.link}" class="px-4 py-2 bg-primary text-white rounded-full font-bold hover:bg-rose-600 transition-colors transform hover:scale-105 shadow-lg">
-                            Ver Detalle
-                        </a>
-                    </div>
+            <div class="reveal bg-white border-2 border-black p-4 shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all duration-300 group animate-in dark:bg-slate-900 dark:border-white dark:shadow-[8px_8px_0px_rgba(255,255,255,0.5)]" style="transition-delay: ${delay}ms">
+                <div class="relative overflow-hidden h-48 border border-black mb-4 grayscale group-hover:grayscale-0 transition-all duration-500 dark:border-white">
+                    <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors font-serif">${project.title}</h3>
-                    <p class="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">${project.description}</p>
-                    <div class="flex flex-wrap gap-2 mb-2">
+                <div class="flex flex-col gap-2">
+                    <span class="text-xs font-bold text-primary uppercase tracking-widest">${project.category}</span>
+                    <h3 class="text-xl font-black text-secondary font-serif leading-tight group-hover:underline underline-offset-2 dark:text-white">${project.title}</h3>
+                    <p class="text-gray-600 text-sm font-serif line-clamp-3 mb-2 dark:text-gray-400">${project.description}</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
                         ${tagsHtml}
                     </div>
                 </div>
@@ -188,27 +206,31 @@ function renderProjects(filter = 'all') {
 
 function filterProjects(category, btn) {
     if (!projectsContainer) return;
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+    document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('active', 'bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
+        b.classList.add('text-gray-500', 'dark:text-gray-400');
+    });
+    btn.classList.add('active', 'bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
+    btn.classList.remove('text-gray-500', 'dark:text-gray-400');
     renderProjects(category);
 }
 
-// --- 4. RENDERIZADO DE SKILLS INTERACTIVAS ---
+// --- 4. RENDERIZADO DE SKILLS INTERACTIVAS (Clasificados Style) ---
 
 const skillsContainer = document.getElementById('skills-container');
 
 function renderSkills() {
-    if (!skillsContainer) return; // Guard clause
+    if (!skillsContainer) return;
 
     skillsContainer.innerHTML = '';
     skills.forEach((skill, index) => {
         const delay = index * 50;
-        // Se añade onclick para abrir el modal
+        // Simple Grid Item with borders and Dark Mode support
         const skillHtml = `
-            <div onclick="openSkillModal(${index})" class="reveal p-6 bg-slate-800 rounded-xl border border-slate-700 flex flex-col items-center justify-center hover:bg-slate-750 hover:border-primary transition-all duration-300 group cursor-pointer shadow-sm hover:shadow-xl hover:-translate-y-1" style="transition-delay: ${delay}ms">
-                <i class="${skill.icon} text-4xl mb-4 ${skill.color} transform group-hover:scale-110 transition-transform duration-300"></i>
-                <span class="font-medium text-slate-300 text-center group-hover:text-white transition-colors">${skill.name}</span>
-                <span class="mt-2 text-xs text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity">Ver detalles</span>
+            <div onclick="openSkillModal(${index})" class="reveal p-6 bg-white border-r border-b border-black flex flex-col items-center justify-center hover:bg-gray-100 transition-all duration-200 cursor-pointer group dark:bg-slate-900 dark:border-white dark:hover:bg-slate-800" style="transition-delay: ${delay}ms">
+                <i class="${skill.icon} text-3xl mb-3 text-secondary group-hover:text-primary transition-colors duration-300 dark:text-white dark:group-hover:text-primary"></i>
+                <span class="font-bold font-serif text-sm text-center uppercase tracking-wider dark:text-white">${skill.name}</span>
+                <span class="mt-2 text-[10px] font-sans font-bold text-gray-400 uppercase tracking-widest group-hover:text-black transition-colors dark:group-hover:text-white">Ver Info +</span>
             </div>
         `;
         skillsContainer.innerHTML += skillHtml;
@@ -230,26 +252,26 @@ function openSkillModal(index) {
 
     // Poblar datos
     modalTitle.textContent = skill.name;
-    modalIcon.className = `${skill.icon} text-2xl ${skill.color}`;
+    modalIcon.className = `${skill.icon}`; // Icon class logic simplified
 
     modalDetails.innerHTML = '';
     skill.details.forEach(detail => {
         const li = document.createElement('li');
-        li.className = "flex items-start";
-        li.innerHTML = `<i class="fas fa-check-circle text-primary mt-1 mr-2 text-xs"></i> <span>${detail}</span>`;
+        li.className = "flex items-start text-gray-800 dark:text-gray-300";
+        li.innerHTML = `<i class="fas fa-caret-right text-primary mt-1 mr-2"></i> <span>${detail}</span>`;
         modalDetails.appendChild(li);
     });
 
     // Mostrar modal
     modal.classList.remove('hidden');
-    // Animacion de entrada (pequeño delay para permitir que el navegador renderice el 'block')
+
     setTimeout(() => {
         modalBackdrop.classList.remove('opacity-0');
         modalPanel.classList.remove('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
         modalPanel.classList.add('opacity-100', 'translate-y-0', 'sm:scale-100');
     }, 10);
 
-    document.body.style.overflow = 'hidden'; // Evitar scroll de fondo
+    document.body.style.overflow = 'hidden';
 }
 
 function closeSkillModal() {
@@ -261,14 +283,14 @@ function closeSkillModal() {
 
     setTimeout(() => {
         modal.classList.add('hidden');
-        document.body.style.overflow = ''; // Restaurar scroll
-    }, 300); // Esperar a que termine la transición (duration-300 por defecto en tailwind si no se especifica, aqui asumimos 300ms por seguridad o ajustamos clases css)
+        document.body.style.overflow = '';
+    }, 300);
 }
 
 // Cerrar al hacer clic fuera del panel
 if (modal) {
     modal.addEventListener('click', (e) => {
-        if (e.target === modal || e.target === modal.querySelector('.flex')) { // Ajuste para detectar clic en el overlay contenedor
+        if (e.target === modal || e.target === modal.querySelector('.flex')) {
             closeSkillModal();
         }
     });
@@ -282,114 +304,105 @@ document.addEventListener('keydown', (e) => {
 });
 
 
-// --- 6. EJECUCIÓN INICIAL Y UTILIDADES ---
+// --- 6. DARK MODE LOGIC ---
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeText = document.getElementById('theme-text');
+const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
 
-if (projectsContainer) renderProjects('all');
-if (skillsContainer) renderSkills();
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    if (menu) menu.classList.toggle('hidden');
-}
-
-// URL del Script de Google Apps (REEMPLAZA ESTO CON TU URL GENERADA)
-const GOOGLE_SCRIPT_URL = 'INGRESA_TU_URL_AQUI';
-
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        if (GOOGLE_SCRIPT_URL === 'INGRESA_TU_URL_AQUI' || GOOGLE_SCRIPT_URL === '') {
-            alert("Por favor configura la URL del Google Script en js/main.js primero.");
-            return;
+function setTheme(isDark) {
+    if (isDark) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        if (themeText) themeText.textContent = "Leer Edición Diurna";
+        if (themeIcon) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
         }
-
-        const btn = this.querySelector('button');
-        const originalText = btn.innerText;
-        const form = this;
-
-        // Feedback visual
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-        btn.disabled = true;
-
-        // Recopilar datos
-        const formData = new FormData(form);
-
-        // Enviar a Google Sheets usa fetch no-cors o cors si el script lo permite (usualmente no-cors para scripts simples)
-        // Pero la mejor forma para estos scripts es un POST simple.
-        fetch(GOOGLE_SCRIPT_URL, {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => {
-                // En aplicaciones web de Apps Script, el modo no-cors no da acceso al estado de respuesta real, 
-                // pero asumimos exito si no da error de red.
-                console.log('Success!', response);
-                const successMsg = document.getElementById('success-message');
-                if (successMsg) {
-                    successMsg.classList.remove('hidden');
-                    setTimeout(() => {
-                        successMsg.classList.add('hidden');
-                    }, 5000);
-                }
-                form.reset();
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                alert('Hubo un error al enviar el mensaje. Inténtalo de nuevo.');
-            })
-            .finally(() => {
-                btn.innerText = originalText;
-                btn.disabled = false;
-            });
-    });
-}
-
-const yearSpan = document.getElementById('year');
-if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-}
-
-window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    if (nav) {
-        if (window.scrollY > 50) {
-            nav.classList.add('shadow-lg');
-        } else {
-            nav.classList.remove('shadow-lg');
+    } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        if (themeText) themeText.textContent = "Leer Edición Nocturna";
+        if (themeIcon) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
         }
     }
-});
+}
 
-// --- 7. CUSTOM CURSOR LOGIC ---
-const cursorDot = document.querySelector('[data-cursor-dot]');
-const cursorOutline = document.querySelector('[data-cursor-outline]');
+// Check saved theme or system preference
+const savedTheme = localStorage.getItem('theme');
+const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-// Solo activar si los elementos existen (para evitar errores en movil donde tal vez se oculten)
-if (cursorDot && cursorOutline) {
-    window.addEventListener('mousemove', function (e) {
-        const posX = e.clientX;
-        const posY = e.clientY;
+if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    setTheme(true);
+} else {
+    setTheme(false);
+}
 
-        // Dot sigue al mouse instantaneamente
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-
-        // Outline sigue con una pequeña animación (usando animate para suavidad extra)
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
-
-    // Detectar elementos interactivos para efecto hover
-    const interactiveElements = document.querySelectorAll('a, button, input, textarea, .cursor-pointer');
-
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
-        el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
+// Toggle Event
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        setTheme(!isDark);
     });
 }
+
+
+// --- 7. INICIALIZACION ---
+document.addEventListener('DOMContentLoaded', () => {
+    // Initial renders
+    renderProjects();
+    renderSkills();
+
+    // Intersection Observer loop
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
+
+    // Custom Cursor
+    const cursorDot = document.querySelector('[data-cursor-dot]');
+    const cursorOutline = document.querySelector('[data-cursor-outline]');
+
+    if (cursorDot && cursorOutline) {
+        window.addEventListener("mousemove", function (e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+    }
+
+    // Set Year
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
+    // Mobile Menu Toggle logic
+    const btnMobileMenu = document.getElementById('btn-mobile-menu');
+    const mobileMenu = document.getElementById('mobile-menu'); // Note: Ensure this exists in HTML if used, otherwise it's just the button scrolling or similar. In this design, we used a top bar, but let's keep the logic safe.
+
+    // In the "Masthead" design, we converted the menu to a simple list. 
+    // If mobile menu logic is needed for a specific dropdown, we can add it. 
+    // For now, the "btn-mobile-menu" scrolls to top or toggles a hidden menu if implemented.
+
+    // Smooth Scroll for Anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
